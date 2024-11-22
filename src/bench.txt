@@ -1,0 +1,104 @@
+puzzle without hp, its/hodoku
+110292 430
+73190 420
+80424 412
+99335 326
+102211 544
+114064 534
+93759 468
+89906 414
+105530 332
+96339 396
+//hor nt
+95005 6 6 6 6
+124895 8 8 8 8
+114498 8 8 8 8
+116889 7 7 7 7
+
+
+C:\Users\grief\.jdks\openjdk-23\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\lib\idea_rt.jar=50664:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\grief\IdeaProjects\untitled\out\production\untitled Main
+Total iterations: 75566
+Naked Single: called 55 times, 21314 total iterations, 387 average iterations
+Hidden Single: called 3 times, 8595 total iterations, 2865 average iterations
+Naked Pair: called 2 times, 13320 total iterations, 6660 average iterations
+Hidden Pair: called 2 times, 12843 total iterations, 6421 average iterations
+Locked Candidate (Type 1): called 2 times, 3213 total iterations, 1606 average iterations
+Naked Triple: called 1 times, 15552 total iterations, 15552 average iterations
+Total iterations: 117385
+Naked Single: called 52 times, 22804 total iterations, 438 average iterations
+Hidden Single: called 10 times, 24759 total iterations, 2475 average iterations
+Naked Pair: called 5 times, 25506 total iterations, 5101 average iterations
+Hidden Pair: called 4 times, 23904 total iterations, 5976 average iterations
+Locked Candidate (Type 1): called 3 times, 4698 total iterations, 1566 average iterations
+Naked Triple: called 1 times, 11340 total iterations, 11340 average iterations
+Total iterations: 91446
+Naked Single: called 54 times, 23361 total iterations, 432 average iterations
+Hidden Single: called 7 times, 17280 total iterations, 2468 average iterations
+Naked Pair: called 3 times, 15156 total iterations, 5052 average iterations
+Hidden Pair: called 2 times, 11943 total iterations, 5971 average iterations
+Locked Candidate (Type 1): called 2 times, 3213 total iterations, 1606 average iterations
+Naked Triple: called 1 times, 16848 total iterations, 16848 average iterations
+Total iterations: 125685
+Naked Single: called 51 times, 22419 total iterations, 439 average iterations
+Hidden Single: called 12 times, 29304 total iterations, 2442 average iterations
+Naked Pair: called 4 times, 24174 total iterations, 6043 average iterations
+Hidden Pair: called 3 times, 20520 total iterations, 6840 average iterations
+Locked Candidate (Type 1): called 3 times, 4887 total iterations, 1629 average iterations
+Naked Triple: called 1 times, 17820 total iterations, 17820 average iterations
+Total iterations: 133178
+Naked Single: called 51 times, 22982 total iterations, 450 average iterations
+Hidden Single: called 11 times, 26577 total iterations, 2416 average iterations
+Naked Pair: called 5 times, 29736 total iterations, 5947 average iterations
+Hidden Pair: called 4 times, 26640 total iterations, 6660 average iterations
+Locked Candidate (Type 1): called 2 times, 3429 total iterations, 1714 average iterations
+Naked Triple: called 1 times, 18711 total iterations, 18711 average iterations
+Total iterations: 160541
+Naked Single: called 54 times, 26297 total iterations, 486 average iterations
+Hidden Single: called 15 times, 37575 total iterations, 2505 average iterations
+Naked Pair: called 6 times, 35505 total iterations, 5917 average iterations
+Hidden Pair: called 4 times, 26073 total iterations, 6518 average iterations
+Locked Candidate (Type 1): called 3 times, 4797 total iterations, 1599 average iterations
+Naked Triple: called 1 times, 22275 total iterations, 22275 average iterations
+Total iterations: 107196
+Naked Single: called 50 times, 21210 total iterations, 424 average iterations
+Hidden Single: called 9 times, 23778 total iterations, 2642 average iterations
+Naked Pair: called 4 times, 25083 total iterations, 6270 average iterations
+Hidden Pair: called 2 times, 13149 total iterations, 6574 average iterations
+Locked Candidate (Type 1): called 2 times, 3240 total iterations, 1620 average iterations
+Naked Triple: called 1 times, 15633 total iterations, 15633 average iterations
+Total iterations: 110496
+Naked Single: called 51 times, 23745 total iterations, 465 average iterations
+Hidden Single: called 12 times, 29421 total iterations, 2451 average iterations
+Naked Pair: called 3 times, 16371 total iterations, 5457 average iterations
+Hidden Pair: called 2 times, 13059 total iterations, 6529 average iterations
+Locked Candidate (Type 1): called 2 times, 3276 total iterations, 1638 average iterations
+Naked Triple: called 1 times, 17334 total iterations, 17334 average iterations
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total iterations: 95373
+Naked Single: called 58 times, 27432 total iterations, 472 average iterations
+Hidden Single: called 15 times, 5364 total iterations, 357 average iterations
+Naked Pair: called 4 times, 17496 total iterations, 4374 average iterations
+Hidden Pair: called 4 times, 26586 total iterations, 6646 average iterations
+Locked Candidate (Type 1): called 3 times, 4833 total iterations, 1611 average iterations
+Naked Triple: called 1 times, 16200 total iterations, 16200 average iterations
+Naked Quadruple: called 1 times, 378 total iterations, 378 average iterations
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total iterations: 90549
+Naked Single: called 58 times, 25785 total iterations, 444 average iterations
+Hidden Single: called 12 times, 5769 total iterations, 480 average iterations
+Naked Pair: called 5 times, 19197 total iterations, 3839 average iterations
+Hidden Pair: called 3 times, 20403 total iterations, 6801 average iterations
+Locked Candidate (Type 1): called 2 times, 3204 total iterations, 1602 average iterations
+Naked Triple: called 1 times, 17415 total iterations, 17415 average iterations
+Naked Quadruple: called 2 times, 1341 total iterations, 670 average iterations
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total iterations: 95823
+Naked Single: called 61 times, 29556 total iterations, 484 average iterations
+Hidden Single: called 19 times, 8226 total iterations, 432 average iterations
+Naked Pair: called 5 times, 17739 total iterations, 3547 average iterations
+Hidden Pair: called 4 times, 22869 total iterations, 5717 average iterations
+Locked Candidate (Type 1): called 2 times, 3258 total iterations, 1629 average iterations
+Naked Triple: called 1 times, 17010 total iterations, 17010 average iterations
+Naked Quadruple: called 3 times, 1422 total iterations, 474 average iterations

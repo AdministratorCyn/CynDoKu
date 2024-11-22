@@ -1,0 +1,204 @@
+boolean[] scB = {false, false, false, false, false, false, false, false, false};
+      boolean[] dirB = {true, true, true};
+      boolean flag = false;
+      char[] cands = {'x', 'x'};
+      int[] dirC = {0, 0, 0};
+      int count = 0;
+      int scount = 0;
+      int sc = 0;
+      int q = 0;
+      while (q < 729) {
+          npAvg++;
+          iterations++;
+        /*
+        blacklist{ % 81 = 0
+        if sc > 5 {
+        skip row + put in blacklist
+        }
+        if t.cg != '0' {
+            skip cell
+        }
+        }
+
+
+
+
+
+
+
+
+        while (blacklist[q % 9] && q % 9 != 8) { //idk
+            q++;
+        }
+
+
+
+
+
+
+
+
+        grab first { //if blacklist q % 9 == 8 skip check step
+        regional second {
+            h
+            v
+            b
+        }
+        }
+         */
+          if (q % 81 == 0) {
+              sc = 0;
+              scB = new boolean[]{false, false, false, false, false, false, false, false, false};
+              for (int i = 0; i < 9; i ++) {
+                  if (this.charGrid[q / 81][i] != '0') {
+                      scB[Character.getNumericValue(this.charGrid[q / 81][i]) - 1] = true;//add flags for each dir
+                      sc++;
+                  }
+                  if (sc > 7) {
+                      q += 80;
+                      break;
+                  }
+              }
+              System.out.println((q / 81) + " " + Arrays.toString(scB));
+              sc = 0;
+          }
+          scount = 0;
+          while ((this.charGrid[q / 81][(q % 81) / 9] != '0') ) {
+              if (!((this.charGrid[q / 81][(q % 81) / 9] != '0') && (q % 81 != 0 || scount == 0))) {
+                  System.out.println("-s " + (q / 81) + " " + (q % 81));
+                  q--;
+                  break;
+              }//wtf
+              if ((this.charGrid[q / 81][(q % 81) / 9] != '0') && (q % 81 != 0 || scount == 0)) {
+                  System.out.println("scB " + (q / 81) + " " + (q % 81));
+                  q += 9;
+              }
+              scount++;
+          }
+          while (scB[q % 9] && q % 9 != 8) {
+              System.out.println("cB @ " + (q / 81) + " " + (q % 81));
+              q++;
+          }
+          if (q % 9 == 8 || !scB[q % 9]) { //m
+              if (this.candGrid[q / 81][q % 81] != '0') {
+                  count++;
+                  System.out.println("count inc " + count + " " + (q % 9));
+              }
+              else {
+                  System.out.println("!@ " + (q / 81) + " " + (q % 81) + " // " + (q % 9));
+              }
+              if (count > 2) {
+                  System.out.println(q + " " + count);
+                  count = 0;
+                  q = (q / 9 * 9 + 8);
+              }
+              else if (q % 9 == 8 && count != 2) {
+                  System.out.println(q + " " + count);
+                  count = 0;
+              }
+              else if (q % 9 == 8) {
+                  System.out.println("bivvy " + (q / 81) + " " + (q % 81) + " " + npAvg);
+                  //cand grab
+                  for (int u = 0; u < 9; u++) {
+                      if (this.candGrid[q / 81][(q % 81) / 9 * 9 + u] != '0' && cands[0] == 'x') {
+                          cands[0] = this.candGrid[q / 81][(q % 81) / 9 * 9 + u];
+                      }
+                      else if (this.candGrid[q / 81][(q % 81) / 9 * 9 + u] != '0') {
+                          cands[1] = this.candGrid[q / 81][(q % 81) / 9 * 9 + u];
+                      }
+                  }
+                  count = 0;
+                  dirB[0] = true; dirB[1] = true; dirB[2] = true;
+                  dirC[0] = 0; dirC[1] = 0; dirC[2] = 0;
+                  for (int u = 0; u < 9; u++) {
+                      if (this.charGrid[q / 81][u] != '0' && u != (q % 81 / 9)) {//hor
+                          dirC[0]++;
+                      }
+                      if (this.charGrid[u][(q % 81) / 9] != '0' && u != (q / 81)) {//vert
+                          dirC[1]++;
+                      }
+                      if (this.charGrid[q / 243 * 3 + u / 3][(q % 81) / 27 * 3 + u % 3] != '0' && u != ((q / 81) * 3 + (q % 27) / 9)) {//box
+                          dirC[2]++;
+                      }
+                      if (dirC[0] > 5) {
+                          dirB[0] = false;
+                      }
+                      if (dirC[1] > 5) {
+                          dirB[1] = false;
+                      }
+                      if (dirC[2] > 5) {
+                          dirB[2] = false;
+                      }
+                      if (!dirB[0] && !dirB[1] && !dirB[2]) {
+                          break;
+                      }
+                  }
+                  System.out.println(Arrays.toString(dirB));
+                  dirC[0] = 0; dirC[1] = 0; dirC[2] = 0;
+                  for (int u = 0; u < 9; u++) {//g2
+                      iterations++;
+                      npAvg++;
+                      if (u != ((q % 81) / 9) && dirB[0]) {//horizontal
+                          if (this.candGrid[q / 81][u * 9 + Character.getNumericValue(cands[0]) - 1] != '0') {
+                              dirC[0]++;
+                          }
+                          if (this.candGrid[q / 81][u * 9 + Character.getNumericValue(cands[1]) - 1] != '0') {
+                              dirC[0]++;
+                          }
+                          if (dirC[0] == 2) {
+                              System.out.println(u + " " + (q % 81 / 9));
+                              for (int v = 0; v < 9; v++) {
+                                  if (this.candGrid[q / 81][u * 9 + v] != '0' && v != Character.getNumericValue(cands[0]) - 1 && v != Character.getNumericValue(cands[1]) - 1) {
+                                      break;
+                                  } else if (v % 9 == 8) {
+                                      System.out.println("aaaaa");
+                                      for (int w = 0; w < 9; w++) {
+                                          if (w != u && w != ((q % 81) / 9) && this.charGrid[q / 81][w] == '0' && (this.candGrid[q / 81][w * 9 + Character.getNumericValue(cands[0]) - 1] != '0' || this.candGrid[q / 81][w * 9 + Character.getNumericValue(cands[1]) - 1] != '0')) {
+                                              this.candGrid[q / 81][w * 9 + Character.getNumericValue(cands[0]) - 1] = '0';
+                                              this.candGrid[q / 81][w * 9 + Character.getNumericValue(cands[1]) - 1] = '0';
+                                              flag = true;
+                                          }
+                                      }
+                                      if (flag) {
+                                          return;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                      if (u != (q / 81) && dirB[1]){
+                          if (this.candGrid[u][(q % 81) / 9 * 9 + Character.getNumericValue(cands[0]) - 1] != '0') {
+                              dirC[1]++;
+                          }
+                          if (this.candGrid[u][(q % 81) / 9 * 9 + Character.getNumericValue(cands[1]) - 1] != '0') {
+                              dirC[1]++;
+                          }
+                          if (dirC[1] == 2) {
+                              for (int v = 0; v < 9; v++) {
+                                  if (this.candGrid[u][(q % 81) / 9 * 9 + v] != '0' && v != Character.getNumericValue(cands[0]) - 1 && v != Character.getNumericValue(cands[1]) - 1) {
+                                      break;
+                                  } else if (v % 9 == 8) {
+                                      System.out.println("aaaaa");
+                                      for (int w = 0; w < 9; w++) {
+                                          if (w != u && w != ((q / 81)) && this.charGrid[w][(q % 81 / 9)] == '0' && (this.candGrid[w][(q % 81) / 9 * 9 + Character.getNumericValue(cands[0]) - 1] != '0' || this.candGrid[w][(q % 81) / 9 * 9 + Character.getNumericValue(cands[1]) - 1] != '0')) {
+                                              this.candGrid[w][(q % 81) / 9 * 9 + Character.getNumericValue(cands[0]) - 1] = '0';
+                                              this.candGrid[w][(q % 81) / 9 * 9 + Character.getNumericValue(cands[1]) - 1] = '0';
+                                              flag = true;
+                                          }
+                                      }
+                                      if (flag){
+                                          return;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                      dirC[0] = 0; dirC[1] = 0;
+                  }
+                  cands[0] = 'x'; cands[1] = 'x';
+              }
+          }
+          System.out.println("a " + q);
+          q++; //do i want this?
+          //System.out.print("          ");
+      }

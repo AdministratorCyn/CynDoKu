@@ -1,0 +1,255 @@
+217.8...558....2...645.2.8.62..4539779526381443..9...2.72954..8.46.2....85..1.42.
+no work
+
+
+.4735.2.......453.5631.2...87..2..5.652.4...831.5....2...4.5963..5.3..2.436219875 looks weird, 150 its
+93426....1..95436..5.13.492295386174463712985718495...5.9873....716.9......5.17.9 no work
+
+
+/*biv skips{ // -------------------- add vars before, write individually, also touch g2
+           header (set vars){
+               if (sc > 5) {
+                   q += 81;
+               }
+               else
+               scB { take from notes || while
+                   route to set div
+               }
+           }
+           skips {
+               if sc = 5 and np (and no elim), second np of not np1 and sc{ (set div)
+
+
+               }
+
+
+               add each dir sc? 6 r1 + 2 c2 {
+
+
+               }
+
+
+               region ignore { (if sc > 7 in a region, skip region in bivF and g2 || while
+
+
+               }
+
+
+               ceB { if ca > 2 add to ceB
+
+
+               }
+                                       order them
+
+
+               caB { try writing this omnidir || while
+                   for (int i = 0; i < 9; i ++) { //put at header
+                       caB[0][0-8]; hor
+                       caB[1][0-8]; vert
+                       caB[2][0-8]; box
+                   }
+
+
+               }
+
+
+               dirBV { (if sc == 7 and bivalue, same bivalue where sc and bv1 isnt) use !sc instead of another 9
+
+
+               }
+           }
+       }
+
+
+          g1 (biv){
+
+
+           cands[0] {
+           }
+
+
+           dirB {
+
+
+           }
+
+
+           cB {
+
+
+           }
+       }
+
+
+       g2 {
+           for u 9 {
+               if (dirB[0] && not same) {
+                   while (scb) {
+                   }
+                   while (cb) {
+                   }
+                   if () {
+                   c++;
+                   }
+               }
+
+
+
+
+       if youve already checked a biv, can add to scB bc omnid
+
+
+       try iterating in front of q % 81 / 9
+
+
+       scb
+
+
+       cb
+
+
+       order
+       1. biv 100%
+       2. sam cands
+
+
+       h {
+
+
+       }
+       v {
+       }
+       b {
+       }
+
+
+           if you find a non elim double bivalue and sc + 2 > 5 !!!REGIONAL!!!
+               would be connected to g2 on fail exit
+
+
+       }
+       */
+
+
+if sc = 4 and np, try to go immediately to nt?
+
+
+.2..1....1...5..42..3..2.16...27193.3.2.8.1...9143.2..53976842168.12...521....6..
+
+
+.2381674.......2.676.......345.8796.1826594736794..58.....6..97296.......37.9862. no work vert
+issue is with sc > 5, ignore for now completely rewrite later
+REMEMBER TO SAVE CODE
+
+
+
+
+//if you finish np, write set divvy, omnidir scb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //you need to save its in g2 side
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //79.4..2.5625...4733..572..6.7...9638139...5.7.867.........257.995...786...7..435.
+  //early exit
+  //solved cell WHILE omnidir sc b
+  //flags
+  //..61729.8..73.5.6....8.67..7..2841....9653.....2719..4..19.8....345.7...9.84.15..
+  //965...8.2..32..9..7428691533.4....87.98.7..3.627.8..91..9431....316.8...4.6...31. bug, see if you can optim further
+  //combine hs first for prac
+  //..68..45.3..91..2...8.......3..9.......4.7.......5..9.......6...5..21..9.21..67.. buggin very high its ..68..45.3..91..2...8.......3..9.......4.7.......5..9.......6...5..21..9.21..67.. % 81 is being skipped somehow
+  //beat 3322.38462 on np, also implement sc black with hs | 95...........9.5.2721456389..5374291293815647147962835.185.97.35...............58, something fucked with hs
+  //wtf is going on with hs on .......3.2.35....4615...7..9.185.......4.3.......194.6..8...6737....89.2.2.......
+  //res adjustment PLEASE
+  //.3...9.27.89..1...6..5....8.23.1...5.........9...4.38.4....2..9...8..23.31.9...7. 39 optimal, issue is likely with skips being counted as one
+  //make sops for literally everything, finish hs
+  //26........1....68284.2.695.674951238152483796938627514.263.58..38...2.6..9..6..2. why is it starting at q80
+  //ok now optim
+  //dont forget box in line elims, figure out if needed
+  //max tf out of ns if you get bored, box/line optims?
+  //dont fully write ht, 3 first, also fix pos -1
+ /* tcg a <= 1
+    take sc, put in blacklist
+    make sure cells can't be checked multiple times **
+    if found n(>4), blacklist
+  */
+  //write something to divide sets for the subset methods, should optim like 10x
+  //863459..1472...9851..8276435241638..736985412981742536.1.59...42...........2..158
+  //writing ht in steps, see comment right of nq
+  //....3.5.27...........6.914.9.53..4.8.47891.353....57.94967.23.1.....3..48.3.1.... whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy check logs FUCK WHY prob just nqv 1 5 / 4 1 / 1 0 /  1 3 second might ust be bugged
+  //vetted sudokus to be lazy
+  //5..821..46.45...8.8.....9.53..7428.6...1.8...7...53..125638........1.5281..275..3 picking up 2469 @ 41
+  //40x optim on nq
+  //reformat comments into txt file %U(*$H(F )RUG_ DIG I_( #T
+  //cell elim np, x != y, fronted ifs
+  //reoptim ps with x != y
+  //find imperfect path!!!!!, maybe add graphics to solver
+
+
+
+
+
+
+
+
+  //GUI + optim update after hidden quad!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  //please use a plain data filewriter
+  //i skipped doing claim :P
+  //csv
+  //benchmarks: nakedSingle = 350, hiddenSingle = 350, nakedPair = 6000!!, 155     puzzle, its/hodoku
+  //remove non cands, change candidates when cell input, add solved cell functionality, add undo
+  //cand grid input: if you put a number where it doesnt belong in a cell, input cell, add regions
+  //add control to solve
+/*b[i][j] = a[i / x][((j % y) / z) - 1 + (i % x) * sqrt(q) + (j / y) * q];
+a[i][j] = b[(i + 1) * x + (j % q) / sqrt(q) + ?][(j / q) * y + (j % sqrt(q)) * z + !
+x = rows/box y = cols/box z = spacing ! = x offset ? = y offset q = cands/box
+*/
+//FIX HIDDENSINGLE NOWWWW!!!!!!
+  //add region candidate display, select regions + do arrows n color
+  //add button to solve  on solve path!!!!!!
+  //add grid t1,s1!!! (tier, stack)
+  //add something to input sudoku to see full string, maybe panes?
+  //make number highlight system, cant i dont think, could work with layering ta?
+  //add an indicator vertical bar between sudoku and buttons
+          //jtooltip
+          //figure out icons
+          //make selector for 0s in sudoku grid
+
+
+
